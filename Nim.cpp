@@ -1,3 +1,7 @@
+//Created By Owen Martin
+//Date: 4/20/25
+//Description: Emulation of NIM in C++
+
 #include <iostream>
 #include <cstdlib>
 using namespace std;
