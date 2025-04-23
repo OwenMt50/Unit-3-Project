@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <cstdlib>
+#include<ctime>
 using namespace std;
 
 int main(){
@@ -11,7 +12,7 @@ int main(){
     int sticks = 16;
     int remove = 0;
     int turn = 0;
-    int computer = rand() % 3; //random number generator between 1 and 3
+    srand(time(0));
     string name = "";
     
     cout<<"Please input a creative username\n"; //user created username
@@ -24,13 +25,18 @@ int main(){
         cout<<"Please remove a number of sticks from 1 to 3.\n";
         cin>>remove; //player chosen stick remove amount
         sticks = sticks - remove; //equation for player stick removal
+        int computer = rand() % 3+1; //random number generator between 1 and 3
         sticks = sticks - computer; //takes player removal and takes computer's random removal amount
+        cout<<"Computer has taken "<<computer<<".\n";
         cout<<"There are now "<<sticks<<" sticks left. \n";
     }
 
-    if (sticks < 0){ //if computer takes more than 0 and goes negative, player wins
-        cout<<"Congratulations, "<<name<<", you have bested the Computer!\n";
-    }else{ if(sticks = 0); //if computer meets 0 then player loses
+    if (sticks >= 0){ //if computer takes more than 0 and goes negative, player wins
         cout<<"Computer opponent has won the round.\n";
+ 
+    }else{ 
+        cout<<"Congratulations, "<<name<<", you have bested the Computer!\n";
+
     }
+
 }
