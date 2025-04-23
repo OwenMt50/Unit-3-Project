@@ -9,14 +9,13 @@ using namespace std;
 
 int main(){
 
-    int sticks = 16;
-    int remove = 0;
-    int turn = 0;
-    srand(time(0));
-    string name = "";
+    int sticks = 16; //set amount of sticks
+    int remove = 0; //integer allows removal of sticks for both player and random number generator
+    srand(time(0)); //allows a random number to be generated PER turn 
+    string name = ""; 
     
     cout<<"Please input a creative username\n"; //user created username
-    cin>>name;
+    cin>>name; 
 
     cout<<"Welcome, "<<name<<", to an emulation of NIM!\n";
     cout<<"Insert instructions here for final draft.\n"; //final draft will have proper instructions for NIM
@@ -31,11 +30,11 @@ int main(){
         cout<<"There are now "<<sticks<<" sticks left. \n";
     }
 
-    if (sticks >= 0){ //if computer takes more than 0 and goes negative, player wins
+    if (sticks >= 0){ //if sticks are more than or equal to 0 for computer, player loses
         cout<<"Computer opponent has won the round.\n";
  
     }else{ 
-        cout<<"Congratulations, "<<name<<", you have bested the Computer!\n";
+        cout<<"Congratulations, "<<name<<", you have bested the Computer!\n"; //any other value for sticks that is less than 0, computer loses and player wins
 
     }
 
