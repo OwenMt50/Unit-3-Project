@@ -17,10 +17,14 @@ int main(){
     cout<<"Please input a creative username\n"; //user created username
     cin>>name; 
 
-    cout<<"Welcome, "<<name<<", to an emulation of NIM!\n";
-    cout<<"Insert instructions here for final draft.\n"; //final draft will have proper instructions for NIM
+    cout<<"Welcome, "<<name<<", to an emulation of NIM!\n"; //First spot where username is displayed
+    cout<<"*INSTRUCTIONS*\n"; //Start of instructions for user, will not repeat again after first turn
+    cout<<"To win you must force the computer to take more sticks than what is displayed during your last turn.\n";
+    cout<<"You will be asked to remove 1 to 3 sticks during each turn.\n";
+    cout<<"If the computer reaches zero, you lose and it wins.\n";
+    cout<<"*BEGIN*\n"; //end of instructions, start of game
 
-    while (sticks > 0){ //while statement if sticks more than 0 then loop keeps going
+    while (sticks > 0){ //while statement if sticks more than 0 then loop keeps going *start of while loop*
         cout<<"Please remove a number of sticks from 1 to 3.\n";
         cin>>remove; //player chosen stick remove amount
         sticks = sticks - remove; //equation for player stick removal
@@ -36,6 +40,6 @@ int main(){
     }else{ 
         cout<<"Congratulations, "<<name<<", you have bested the Computer!\n"; //any other value for sticks that is less than 0, computer loses and player wins
 
-    }
+    } //*end of while loop*
 
 }
