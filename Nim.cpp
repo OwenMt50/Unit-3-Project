@@ -1,10 +1,10 @@
 //Created By Owen Martin
 //Date: 4/20/25
-//Description: Emulation of NIM in C++
+//Description: Emulation of NIM in C++ with user created username, and random number generator as an opponent
 
 #include <iostream>
 #include <cstdlib>
-#include<ctime>
+#include <ctime>
 using namespace std;
 
 int main(){
